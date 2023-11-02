@@ -1,0 +1,53 @@
+.nav-underline .nav-link {
+  color: #252b33;
+}
+
+.Header_nav_dropdown__1FAtP .nav-item:last-child {
+  border: none;
+}
+
+@media screen and (max-width: 991px) {
+  .Header_nav_dropdown__1FAtP .nav-item {
+    border-bottom: 1px solid #e7e1e1;
+  }
+}
+
+.section {
+  overflow: hidden;
+  padding: 6.5rem 0;
+  position: relative;
+}
+
+.bg_section {
+  background-color: #00fe9c;
+}
+
+.Header_nav_content__qQrtG .Header_nav_link__zuZao .nav-link:hover {
+  border-bottom-color: #00fe9c;
+  color: #000;
+}
+
+.Header_nav_content__qQrtG .Header_nav_link__zuZao .nav-link.active {
+  border-bottom-color: #00fe9c;
+  font-weight: 600;
+}
+
+.fs-18 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-download:hover .link-dark {
+  color: #fff !important;
+}
+
+@media screen and (max-width: 991px) {
+  .Header_nav_content__qQrtG .Header_nav_link__zuZao .nav-link.active {
+    color: #f5df4e;
+    font-weight: 600;
+  }
+
+  .Header_nav_content__qQrtG .Header_nav_link__zuZao .nav-link:hover {
+    color: #f5df4e;
+  }
+}

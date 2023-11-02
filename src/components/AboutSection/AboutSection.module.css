@@ -1,0 +1,39 @@
+.text_1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.experience_box {
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+.experience_box_icon {
+  align-items: center;
+  background-color: #00fe9c;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .03);
+  color: #4c4d4d;
+  flex-shrink: 0;
+  font-size: calc(2.025rem + 7.3vw);
+  font-weight: 500;
+  height: 120px;
+  justify-content: center;
+  line-height: 1.3;
+  margin: 0 auto 1.5rem;
+  min-height: 55px;
+  min-width: 55px;
+  padding: 0;
+  text-align: center;
+  width: 120px;
+
+}
+
+.experience_box h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,65 @@
+.wrapper_home_section {
+  background-color: #00fe9c;
+  flex-direction: row;
+  height: calc(100vh - 70px);
+  position: relative;
+}
+
+.wrapper_home_section h1 {
+  font-size: 43px;
+}
+
+.wrapper_home_section h2 {
+  font-weight: 600;
+}
+
+.wrapper_home_section a {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.8rem 2.6rem;
+}
+
+.wrapper_home_section .contact_button {
+  border-radius: 0;
+  color: black;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.wrapper_home_section .contact_button:hover {
+  opacity: 0.3;
+}
+
+.contact_button i {
+  -webkit-text-stroke: 0.8px;
+}
+
+.wrapper_home_section .scroll_down_arrow {
+  animation: jump 0.9s ease-out infinite;
+  bottom: 25px;
+  color: black;
+  font-size: 34px;
+  left: 48%;
+  padding: 0;
+  position: absolute;
+  scroll-behavior: smooth;
+  text-align: center;
+  z-index: 1;
+  -webkit-text-stroke: 0.8px;
+}
+
+.typing_text {
+  font-size: calc(1.775rem + 3.3vw);
+}
+
+@keyframes jump {
+  0% {
+    bottom: 25px;
+    opacity: 0.2;
+  }
+
+  100% {
+    bottom: 1px;
+    opacity: 1;
+  }
+}
