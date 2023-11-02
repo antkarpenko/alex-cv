@@ -1,56 +1,10 @@
 import { Button, Col, Container, Row, Stack } from "react-bootstrap";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated, useInView } from "@react-spring/web";
 import styles from "./AboutSection.module.css";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 import cvPdf from "../../assets/cv.pdf";
 import FadeInUp from "../FadeInUp";
 
-
 const AboutSection = () => {
-  const VISIBLE_ANIMATIONS = [false, false, false, false];
-
-  const [isVisible, setIsVisible] = useState(VISIBLE_ANIMATIONS);
-
-  const [ref_0, inView_0] = useInView({
-    triggerOnce: true,
-  });
-
-  const [ref_1, inView_1] = useInView({
-    triggerOnce: true,
-  });
-
-  const [ref_2, inView_2] = useInView({
-    triggerOnce: true,
-  });
-
-  const [ref_3, inView_3] = useInView({
-    triggerOnce: true,
-  });
-
-
-  useEffect(() => {
-    const setVisibleAnimate = (animations, animationIndex) =>
-      animations.map((animation, index) =>
-        index === animationIndex ? true : animation
-      );
-    if (inView_0) {
-      setIsVisible((prev) => setVisibleAnimate(prev, 0));
-    }
-
-    if (inView_1) {
-      setIsVisible((prev) => setVisibleAnimate(prev, 1));
-    }
-
-    if (inView_2) {
-      setIsVisible((prev) => setVisibleAnimate(prev, 2));
-    }
-
-    if (inView_3) {
-      setIsVisible((prev) => setVisibleAnimate(prev, 3));
-    }
-  }, [inView_0, inView_1, inView_2, inView_3]);
-
   const hearBeat = useSpring({
     from: { transform: "scale(1)" },
     to: [
@@ -86,8 +40,8 @@ const AboutSection = () => {
     <Stack className={`${styles.wrapper_about_section} section`} id="about">
       <Container>
         <Row>
-          <Col ref={ref_0}>
-            <FadeInUp isVisible={isVisible[0]}>
+          <Col>
+            <FadeInUp>
               <p className="text-center mb-2">
                 <span className="bg_section text-dark px-2">About Me</span>
               </p>
@@ -95,15 +49,15 @@ const AboutSection = () => {
           </Col>
         </Row>
         <Row>
-          <Col ref={ref_1}>
-            <FadeInUp isVisible={isVisible[1]}>
-              <h2 className={styles.text_1}>Know Me More</h2>
+          <Col>
+            <FadeInUp>
+              <h2 className="text-1">Know Me More</h2>
             </FadeInUp>
           </Col>
         </Row>
         <Row>
-          <Col className="text-center text-lg-start fs-2" lg={8} ref={ref_2}>
-            <FadeInUp isVisible={isVisible[2]}>
+          <Col className="text-center text-lg-start fs-2" lg={8}>
+            <FadeInUp>
               <h2 className=" mb-3 fw-normal">Hello there!</h2>
               <p className="fs-5" style={{ lineHeight: 1.8 }}>
                 I'm a Senior Software Engineer with over 12 years of experience,
@@ -118,14 +72,14 @@ const AboutSection = () => {
             </FadeInUp>
           </Col>
           <Col className="mt-4 mt-lg-0" lg={4}>
-            <FadeInUp delay={200} isVisible={isVisible[2]}>
+            <FadeInUp>
               <div className={styles.experience_box}>
                 <Stack className={styles.experience_box_icon}>
-                  <animated.div style={{...(isVisible[2] ? hearBeat: {})}}>
+                  <animated.div style={hearBeat}>
                     <span>12</span>
                   </animated.div>
                 </Stack>
-                <animated.div style={{...(isVisible[2] ? rubberBand : {})}}>
+                <animated.div style={rubberBand}>
                   <h3>
                     Years of <span className="fw-bold">Experiance</span>
                   </h3>
@@ -134,28 +88,31 @@ const AboutSection = () => {
             </FadeInUp>
           </Col>
         </Row>
-        <Row className="gy-3 mt-4" ref={ref_3}>
+        <Row className="gy-3 mt-4">
           <Col lg={3} md={6}>
-            <FadeInUp delay={200} isVisible={isVisible[3]}>
+            <FadeInUp delay={200}>
               <p className="text-muted fw-normal mb-0">Name:</p>
               <p className="fs-18 text-dark mb-0"> Alex Doroshenko</p>
             </FadeInUp>
           </Col>
           <Col className="p-0" lg={4} md={6}>
-            <FadeInUp delay={400} isVisible={isVisible[3]}>
+            <FadeInUp delay={400}>
               <p className="text-muted fw-normal mb-0">Email:</p>
               <p className="fs-18 mb-0">
+                <a className="link-dark" href="mailto:drshnk.alex@gmail.com">
+                  drshnk.alex@gmail.com
+                </a>
               </p>
             </FadeInUp>
           </Col>
           <Col lg={2} md={6}>
-            <FadeInUp delay={600} isVisible={isVisible[3]}>
+            <FadeInUp delay={600}>
               <p className="text-muted fw-normal mb-0">From:</p>
               <p className="fs-18 text-dark mb-0">Ukraine</p>
             </FadeInUp>
           </Col>
           <Col className="d-flex align-items-center" lg={3} md={6}>
-            <FadeInUp delay={800} isVisible={isVisible[3]}>
+            <FadeInUp delay={800}>
               <Button
                 className="rounded-0  btn-download"
                 size="lg"

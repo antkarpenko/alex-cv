@@ -2,7 +2,7 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header/Header";
 import HomeSection from "./components/HomeSection/HomeSection";
-import { AboutSection } from "./components";
+import { AboutSection, ResumeSection, ServicesSection } from "./components";
 
 function App() {
   return (
@@ -11,6 +11,8 @@ function App() {
       <main>
         <HomeSection />
         <AboutSection />
+        <ServicesSection />
+        <ResumeSection />
       </main>
     </div>
   );
