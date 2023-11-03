@@ -76,6 +76,44 @@
   font-size: 1.75rem;
 }
 
+.project-modal .modal-content {
+  border-radius: 0;
+}
+
+.project-modal .modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-modal .carousel-indicators {
+  bottom: -15%;
+}
+
+.project-modal .carousel-indicators [data-bs-target] {
+  background-color: #cdd4d2;
+  border-radius: 50%;
+  height: 10px;
+  margin: 5px;
+  width: 10px;
+}
+
+.project-modal .carousel-indicators .active {
+  background-color: #00fe9c;
+}
+
+.project-modal .carousel-control-next-icon, .project-modal .carousel-control-prev-icon {
+  color: #00fe9c !important;
+  opacity: 0;
+}
+
+.project-modal .carousel:hover .carousel-control-next-icon {
+  opacity: 1;
+}
+
+.project-modal .carousel:hover .carousel-control-prev-icon {
+  opacity: 1;
+}
+
 @media screen and (max-width: 991px) {
   .Header_nav_content__qQrtG .Header_nav_link__zuZao .nav-link.active {
     color: #f5df4e;

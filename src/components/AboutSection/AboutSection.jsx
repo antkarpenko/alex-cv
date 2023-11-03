@@ -1,40 +1,61 @@
 import { Button, Col, Container, Row, Stack } from "react-bootstrap";
-import { useSpring, animated, useInView } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 import styles from "./AboutSection.module.css";
 import cvPdf from "../../assets/cv.pdf";
 import FadeInUp from "../FadeInUp";
+import { useEffect, useState } from "react";
 
 const AboutSection = () => {
-  const hearBeat = useSpring({
-    from: { transform: "scale(1)" },
-    to: [
-      { transform: "scale(1)" },
-      { transform: "scale(1.3)" },
-      { transform: "scale(1)" },
-      { transform: "scale(1.3)" },
-      { transform: "scale(1)" },
-    ],
-    config: {
-      duration: 200,
-    },
-    delay: 1100,
-  });
+  const [startAnimation, setStartAnimation] = useState(false);
 
-  const rubberBand = useSpring({
-    from: { transform: "scale3d(1,1,1)" },
-    to: [
-      { transform: "scale3d(1.25, 0.75, 1)" },
-      { transform: "scale3d(0.75, 1.25, 1)" },
-      { transform: "scale3d(1.15, 0.85, 1" },
-      { transform: "scale3d(0.95, 1.05, 1)" },
-      { transform: "scale3d(1.05, 0.95, 1)" },
-      { transform: "scale3d(1, 1, 1)" },
-    ],
-    config: {
-      duration: 150,
-    },
-    delay: 2000,
-  });
+  const [hearBeatProps, apiHearBeat] = useSpring(
+    () => ({
+      from: { transform: "scale(1)" },
+    }),
+    []
+  );
+
+  const [rubberBandProps, apiRubberBand] = useSpring(
+    () => ({
+      from: { transform: "scale3d(1,1,1)" },
+    }),
+    []
+  );
+
+  useEffect(() => {
+    if (startAnimation) {
+      apiHearBeat.start({
+        from: { transform: "scale(1)" },
+        to: [
+          { transform: "scale(1)" },
+          { transform: "scale(1.3)" },
+          { transform: "scale(1)" },
+          { transform: "scale(1.3)" },
+          { transform: "scale(1)" },
+        ],
+        delay: 700,
+        config: {
+          duration: 300,
+        },
+      });
+
+      apiRubberBand.start({
+        from: { transform: "scale3d(1,1,1)" },
+        to: [
+          { transform: "scale3d(1.25, 0.75, 1)" },
+          { transform: "scale3d(0.75, 1.25, 1)" },
+          { transform: "scale3d(1.15, 0.85, 1" },
+          { transform: "scale3d(0.95, 1.05, 1)" },
+          { transform: "scale3d(1.05, 0.95, 1)" },
+          { transform: "scale3d(1, 1, 1)" },
+        ],
+        config: {
+          duration: 150,
+        },
+        delay: 2000,
+      });
+    }
+  }, [apiHearBeat, apiRubberBand, rubberBandProps, startAnimation]);
 
   return (
     <Stack className={`${styles.wrapper_about_section} section`} id="about">
@@ -72,14 +93,14 @@ const AboutSection = () => {
             </FadeInUp>
           </Col>
           <Col className="mt-4 mt-lg-0" lg={4}>
-            <FadeInUp>
+            <FadeInUp delay={350} onRest={() => setStartAnimation(true)}>
               <div className={styles.experience_box}>
                 <Stack className={styles.experience_box_icon}>
-                  <animated.div style={hearBeat}>
+                  <animated.div style={hearBeatProps}>
                     <span>12</span>
                   </animated.div>
                 </Stack>
-                <animated.div style={rubberBand}>
+                <animated.div style={rubberBandProps}>
                   <h3>
                     Years of <span className="fw-bold">Experiance</span>
                   </h3>

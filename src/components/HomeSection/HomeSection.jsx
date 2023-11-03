@@ -2,8 +2,14 @@ import { Button, Col, Container, Image, Row, Stack } from "react-bootstrap";
 import styles from "./HomeSection.module.css";
 import { TypeAnimation } from "react-type-animation";
 import avatar from "../../assets/avatar.jpg";
+import { animated, useSpring } from "@react-spring/web";
 
 const HomeSection = () => {
+  const springs = useSpring({
+    from: { opacity: 0, transform: "scale3d(0.3, 0.3, 0.3)" },
+    to: { opacity: 1, transform: "scale3d(1 , 1, 1)" },
+  });
+
   return (
     <Stack id="home" className={styles.wrapper_home_section}>
       <Container className="my-auto py-5 py-lg-0">
@@ -53,9 +59,11 @@ const HomeSection = () => {
             className="text-center align-self-center mb-4 mb-lg-0 order-0 order-lg-1"
             lg={4}
           >
-            <div className="bg-light rounded-pill d-inline-block p-3 shadow-lg">
-              <Image fluid src={avatar} roundedCircle />
-            </div>
+            <animated.div style={springs}>
+              <div className="bg-light rounded-pill d-inline-block p-3 shadow-lg">
+                <Image fluid src={avatar} roundedCircle />
+              </div>
+            </animated.div>
           </Col>
         </Row>
       </Container>

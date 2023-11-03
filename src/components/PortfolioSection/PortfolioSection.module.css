@@ -1,0 +1,24 @@
+.portfolio:hover .portfolio_details {
+  opacity: 1;
+}
+
+.portfolio_details {
+  align-items: center;
+  background: rgba(0, 0, 0, .7);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0
+}
+
+.portfolio_details i {
+  color: #00fe9c;
+  font-size: 2rem;
+
+}
