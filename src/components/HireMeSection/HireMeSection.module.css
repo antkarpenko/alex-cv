@@ -1,0 +1,56 @@
+.wrapper_hire_me_section {
+  max-height: 450px;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper_hire_me_section img {
+  max-height: 450px;
+  min-height: 400px;
+}
+
+.content {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+}
+
+.bg_dark {
+  background-color: #111418;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.animation_box {
+  align-items: center;
+  height: 400px;
+  justify-content: center;
+}
+
+.hire_button {
+  background-color: #00fe9c;
+  border-color: #00fe9c;
+  border-radius: 0;
+  color: #212529;
+  font-size: 16px;
+  padding: 13px 42px;
+
+}
+
+.hire_button:hover {
+  background-color: #00da86;
+  border-color: #00da86;
+  color: #212529;
+  font-size: 16px;
+}

@@ -7,3 +7,6 @@ export { default as ResumeSection} from "./ResumeSection/ResumeSection";
 export { default as PortfolioSection } from "./PortfolioSection/PortfolioSection";
 export { default as ProjectModal } from "./ProjectModal/ProjectModal";
 export { default as ProjectCarousel } from "./ProjectCarousel/ProjectCarousel";
+export { default as HireMeSection } from "./HireMeSection/HireMeSection";
+export { default as RubberBand } from "./RubberBand";
+export { default as ContactSection } from "./ContactSection/ContactSection";

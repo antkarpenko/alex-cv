@@ -4,6 +4,7 @@ import styles from "./AboutSection.module.css";
 import cvPdf from "../../assets/cv.pdf";
 import FadeInUp from "../FadeInUp";
 import { useEffect, useState } from "react";
+import RubberBand from "../RubberBand";
 
 const AboutSection = () => {
   const [startAnimation, setStartAnimation] = useState(false);
@@ -11,13 +12,6 @@ const AboutSection = () => {
   const [hearBeatProps, apiHearBeat] = useSpring(
     () => ({
       from: { transform: "scale(1)" },
-    }),
-    []
-  );
-
-  const [rubberBandProps, apiRubberBand] = useSpring(
-    () => ({
-      from: { transform: "scale3d(1,1,1)" },
     }),
     []
   );
@@ -38,24 +32,8 @@ const AboutSection = () => {
           duration: 300,
         },
       });
-
-      apiRubberBand.start({
-        from: { transform: "scale3d(1,1,1)" },
-        to: [
-          { transform: "scale3d(1.25, 0.75, 1)" },
-          { transform: "scale3d(0.75, 1.25, 1)" },
-          { transform: "scale3d(1.15, 0.85, 1" },
-          { transform: "scale3d(0.95, 1.05, 1)" },
-          { transform: "scale3d(1.05, 0.95, 1)" },
-          { transform: "scale3d(1, 1, 1)" },
-        ],
-        config: {
-          duration: 150,
-        },
-        delay: 2000,
-      });
     }
-  }, [apiHearBeat, apiRubberBand, rubberBandProps, startAnimation]);
+  }, [apiHearBeat, startAnimation]);
 
   return (
     <Stack className={`${styles.wrapper_about_section} section`} id="about">
@@ -100,11 +78,15 @@ const AboutSection = () => {
                     <span>12</span>
                   </animated.div>
                 </Stack>
-                <animated.div style={rubberBandProps}>
+                <RubberBand
+                  startAnimation={startAnimation}
+                  delay={2000}
+                  duration={150}
+                >
                   <h3>
                     Years of <span className="fw-bold">Experiance</span>
                   </h3>
-                </animated.div>
+                </RubberBand>
               </div>
             </FadeInUp>
           </Col>

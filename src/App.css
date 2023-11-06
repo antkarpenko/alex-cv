@@ -114,6 +114,21 @@
   opacity: 1;
 }
 
+#contact-form .is-invalid {
+  box-shadow: none;
+}
+
+.form-control:focus {
+  background-color: transparent !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 @media screen and (max-width: 991px) {
   .Header_nav_content__qQrtG .Header_nav_link__zuZao .nav-link.active {
     color: #f5df4e;

@@ -56,7 +56,13 @@ const PortfolioSection = () => {
 
           <Col className={styles.portfolio} lg={4}>
             <FadeInUp>
-              <div className="position-relative" onClick={() => setProject(1)}>
+              <div
+                className="position-relative"
+                onClick={() => {
+                  setProject(1);
+                  setModalShow(true);
+                }}
+              >
                 <Ratio aspectRatio={2 / 3}>
                   <Image alt="photoland" fluid src={photoland} />
                 </Ratio>
@@ -80,7 +86,10 @@ const PortfolioSection = () => {
                 </Ratio>
                 <div
                   className={styles.portfolio_details}
-                  onClick={() => setProject(2)}
+                  onClick={() => {
+                    setProject(2);
+                    setModalShow(true);
+                  }}
                 >
                   <i className="bi bi-file-earmark-text-fill mb-3" />
 

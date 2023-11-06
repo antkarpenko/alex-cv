@@ -18,6 +18,22 @@ const PROJECTS_DETAILS = [
     ],
     outcome: `By utilizing cutting-edge technologies, namely React and Express, the app gains the ability to manage increasing demand and data processing. This ensures its scalability for future growth.`,
   },
+  {
+    title: "Photoland",
+    technologies: "Photoland",
+    project_info: "Photoland",
+    project_details: "Photoland",
+    project_details_list: ["Photoland", "Photoland", "Photoland"],
+    outcome: "Photoland",
+  },
+  {
+    title: "Vroomchat",
+    technologies: "Vroomchat",
+    project_info: "Vroomchat",
+    project_details: "Vroomchat",
+    project_details_list: ["Vroomchat", "Vroomchat", "Vroomchat"],
+    outcome: "Vroomchat",
+  },
 ];
 
 const ProjectModal = ({ modalShow, modalHide, project }) => {
@@ -38,7 +54,7 @@ const ProjectModal = ({ modalShow, modalHide, project }) => {
           </h2>
           <Row className="g-4">
             <Col>
-              <ProjectCarousel />
+              <ProjectCarousel project={project} />
               <Stack>
                 <h4 className="fs-4 fw-600 mt-3">Project Info:</h4>
                 <p>{PROJECTS_DETAILS[project].project_info}</p>
