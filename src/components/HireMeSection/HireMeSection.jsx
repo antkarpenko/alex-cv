@@ -22,7 +22,7 @@ const HireMeSection = () => {
             <RubberBand startAnimation={startAnimation} delay={200}>
               <Button
                 className={styles.hire_button}
-                href="#home"
+                href="#contact"
                 size="lg"
                 variant="primary"
               >
