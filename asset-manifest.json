@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alex-cv/static/css/main.c108f1df.css",
-    "main.js": "/alex-cv/static/js/main.92fe7b5f.js",
+    "main.js": "/alex-cv/static/js/main.305d1b1a.js",
     "static/js/787.a71561b8.chunk.js": "/alex-cv/static/js/787.a71561b8.chunk.js",
     "static/media/Vroomchat.png": "/alex-cv/static/media/Vroomchat.bfd9abc1d445f6368c7b.png",
     "static/media/Photoland2.png": "/alex-cv/static/media/Photoland2.567cc816041457fa2763.png",
@@ -34,11 +34,11 @@
     "static/media/cloud.svg": "/alex-cv/static/media/cloud.0ddaaadbfdb598d0da43f36ba5b1df4f.svg",
     "static/media/mobile.svg": "/alex-cv/static/media/mobile.ce537d0d7b511f9ea5651fa504158a01.svg",
     "main.c108f1df.css.map": "/alex-cv/static/css/main.c108f1df.css.map",
-    "main.92fe7b5f.js.map": "/alex-cv/static/js/main.92fe7b5f.js.map",
+    "main.305d1b1a.js.map": "/alex-cv/static/js/main.305d1b1a.js.map",
     "787.a71561b8.chunk.js.map": "/alex-cv/static/js/787.a71561b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c108f1df.css",
-    "static/js/main.92fe7b5f.js"
+    "static/js/main.305d1b1a.js"
   ]
 }
