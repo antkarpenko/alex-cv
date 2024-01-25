@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 318" width="300" height="318">
+	<title>desktop-svgrepo-com-svg</title>
+	<style>
+		.s0 { fill: #00fe9c } 
+	</style>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s0" d="m17.6 34.8c0-8.8 7.2-16 16-16h250.4c8.8 0 16 7.2 16 16v178.2c0 8.8-7.2 16-16 16h-250.4c-8.8 0-16-7.2-16-16zm34.8 148.3c0 6.7 5.4 12 12 12h188.9c6.6 0 12-5.3 12-12v-119.9c0-6.6-5.4-12-12-12h-188.9c-6.6 0-12 5.4-12 12z"/>
+			<path id="Layer" fill-rule="evenodd" class="s0" d="m254.9 266.5h-80v-36.1h-32.8v36.1h-78.9c-4.9 0-9 14-9 21 0 7.2 4.1 11 9 11h191.7c5 0 9.1-3.8 9.1-11 0-7-4.1-21-9.1-21z"/>
+		</g>
+	</g>
+	<path id="Layer" class="s0" d="m102.6 114c-12.2 0-22-9.7-22-21.8 0-12.1 9.8-21.9 22-21.9 12.2 0 22.1 9.8 22.1 21.9 0 12.1-9.9 21.8-22.1 21.8z"/>
+	<path id="Layer" fill-rule="evenodd" class="s0" d="m208.7 78.7l41.4 103.9h-179.4l52-59.9 46.7 14.1z"/>
+</svg>
