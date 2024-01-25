@@ -19,9 +19,8 @@ const ContactSection = () => {
   });
 
   const onSubmit = async (values, { resetForm }) => {
-
     const formData = new FormData();
-    formData.append("email", 'xtenor1@mailforspam.com');
+    formData.append('email', 'xtenor1@mailforspam.com');
 
     Object.keys(values).forEach((key) => {
       formData.append(key, values[key]);
@@ -61,21 +60,27 @@ const ContactSection = () => {
               </p>
               <h3 className='fs-5 fw-600'>Contact:</h3>
               <Stack>
-                <a
-                  href={`mailto: ${EMAIL}`}
-                  className='text-dark text-decoration-none'
-                >
-                  {EMAIL}
-                </a>
-                <a
-                  href={LINKEDIN}
-                  style={{ wordBreak: 'break-word' }}
-                  rel='noreferrer'
-                  target='_blank'
-                  className='text-dark text-decoration-none mt-2'
-                >
-                  Linkedin
-                </a>
+                 <div>
+                  <i className='bi bi-envelope-at-fill fs-5' />
+                  <a
+                    href={`mailto: ${EMAIL}`}
+                    className='text-dark ms-3'
+                  >
+                    {EMAIL}
+                  </a>
+                </div>
+
+                <div className='mt-2'>
+                  <i className='bi bi-linkedin fs-5' />
+                  <a
+                    href={LINKEDIN}
+                    rel='noreferrer'
+                    target='_blank'
+                    className='text-dark ms-3'
+                  >
+                    Linkedin
+                  </a>
+                </div>
               </Stack>
             </FadeInUp>
           </Col>
