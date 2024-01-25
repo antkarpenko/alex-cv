@@ -1,131 +1,172 @@
-import { Button, Col, Container, Form, Row, Stack } from "react-bootstrap";
-import styles from "./ContactSection.module.css";
-import * as formik from "formik";
-import * as yup from "yup";
-import FadeInUp from "../FadeInUp";
+import { Button, Col, Container, Form, Row, Stack } from 'react-bootstrap';
+import styles from './ContactSection.module.css';
+import * as formik from 'formik';
+import * as yup from 'yup';
+import FadeInUp from '../FadeInUp';
+import { useState } from 'react';
+
+const EMAIL = 'drshnk.alex@gmail.com';
+const LINKEDIN = 'https://www.linkedin.com/in/doroshenko-senior/';
 
 const ContactSection = () => {
   const { Formik } = formik;
+  const [result, setResult] = useState('');
 
   const schema = yup.object().shape({
-    Name: yup.string().required(),
-    Email: yup.string().email().required(),
-    Text: yup.string().required(),
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    text: yup.string().required(),
   });
 
-  const onSubmit = (values, { resetForm }) => {
-    console.log("values", values);
-    resetForm({ Name: "", Email: "", Text: "" });
+  const onSubmit = async (values, { resetForm }) => {
+
+    const formData = new FormData();
+    formData.append("email", 'xtenor1@mailforspam.com');
+
+    Object.keys(values).forEach((key) => {
+      formData.append(key, values[key]);
+    });
+
+    formData.append('access_key', process.env.REACT_APP_ACCESS_KEY);
+
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      setResult(res.message);
+    } else {
+      setResult(res.message);
+    }
+
+    setTimeout(() => {
+      setResult('');
+    }, 3000);
+
+    resetForm({ name: '', email: '', text: '' });
   };
 
   return (
-    <Stack className={`${styles.wrapper_contact_section} section`}>
+    <Stack className={`${styles.wrapper_contact_section} section`} id='contact'>
       <Container>
         <Row>
-          <Col className="text-center text-lg-start" lg={5}>
+          <Col className='text-center text-lg-start' lg={5}>
             <FadeInUp>
-              <h2 className="fs-1 fw-600 mb-5">Let's get in touch</h2>
-              <p className="fs-5 mb-5">
+              <h2 className='fs-1 fw-600 mb-5'>Let's get in touch</h2>
+              <p className='fs-5 mb-5'>
                 I enjoy discussing new projects and design challenges. Please
                 share as much info, as possible so we can get the most out of
                 our first catch-up.
               </p>
-              <h3 className="fs-5 fw-600">Living In:</h3>
-              <address className="fs-6">
-                Kyiv, 11 Bankova Str., Ukraine.
-              </address>
-              <h3 className="fs-5 fw-600">Call:</h3>
-              <p className="fs-5">+38 050 000 000 0</p>
+              <h3 className='fs-5 fw-600'>Contact:</h3>
+              <Stack>
+                <a
+                  href={`mailto: ${EMAIL}`}
+                  className='text-dark text-decoration-none'
+                >
+                  {EMAIL}
+                </a>
+                <a
+                  href={LINKEDIN}
+                  style={{ wordBreak: 'break-word' }}
+                  rel='noreferrer'
+                  target='_blank'
+                  className='text-dark text-decoration-none mt-2'
+                >
+                  Linkedin
+                </a>
+              </Stack>
             </FadeInUp>
           </Col>
-          <Col className="ms-auto mt-5 mt-lg-0" lg={6}>
+          <Col className='ms-auto mt-5 mt-lg-0' lg={6}>
             <FadeInUp>
-              <h2 className="fs-1 fw-600 mb-5">Estimate your Project?</h2>
+              <h2 className='fs-1 fw-600 mb-5'>Estimate your Project?</h2>
               <Formik
                 validationSchema={schema}
                 onSubmit={onSubmit}
-                validateOnChange={false}
+                validateOnChange={true}
                 validateOnBlur={false}
                 initialValues={{
-                  Name: "",
-                  Email: "",
-                  Text: "",
+                  name: '',
+                  email: '',
+                  text: '',
                 }}
               >
                 {({ handleSubmit, handleChange, values, errors }) => (
-                  <Form id="contact-form" onSubmit={handleSubmit}>
-                    <Row className="g-4">
+                  <Form id='contact-form' onSubmit={handleSubmit}>
+                    <Row className='g-4'>
                       <Form.Group
                         as={Col}
                         xs={12}
-                        controlId="validationFormik01"
+                        controlId='validationFormik01'
                       >
                         <Form.Label>What is Your Name:</Form.Label>
                         <Form.Control
                           className={`${styles.form_border} py-1`}
-                          name="Name"
-                          value={values.Name}
+                          name='name'
+                          value={values.name}
                           onChange={handleChange}
-                          isInvalid={!!errors.Name}
-                          type="text"
+                          isInvalid={!!errors.name}
+                          type='text'
                         />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.Name}
+                        <Form.Control.Feedback type='invalid'>
+                          {errors.name}
                         </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group
                         as={Col}
                         xs={12}
-                        controlId="validationFormik02"
+                        controlId='validationFormik02'
                       >
                         <Form.Label>Email address:</Form.Label>
                         <Form.Control
                           className={`${styles.form_border} py-1`}
-                          type="email"
-                          name="Email"
-                          value={values.Email}
+                          type='email'
+                          name='email'
+                          value={values.email}
                           onChange={handleChange}
-                          isInvalid={!!errors.Email}
+                          isInvalid={!!errors.email}
                         />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.Email}
+                        <Form.Control.Feedback type='invalid'>
+                          {errors.email}
                         </Form.Control.Feedback>
                       </Form.Group>
                       <Form.Group
                         as={Col}
                         xs={12}
-                        controlId="validationFormik03"
+                        controlId='validationFormik03'
                       >
                         <Form.Label>How can I Help you?</Form.Label>
                         <Form.Control
-                          as="textarea"
+                          as='textarea'
                           className={`${styles.form_border} py-1`}
-                          rows="4"
-                          type="text"
-                          name="Text"
-                          value={values.Text}
+                          rows='4'
+                          type='text'
+                          name='text'
+                          value={values.text}
                           onChange={handleChange}
-                          isInvalid={!!errors.Text}
+                          isInvalid={!!errors.text}
                         />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.Text}
+                        <Form.Control.Feedback type='invalid'>
+                          {errors.text}
                         </Form.Control.Feedback>
                       </Form.Group>
-                      <Col className="text-center text-lg-start" xs={12}>
+                      <Col className='text-center text-lg-start' xs={12}>
                         <Stack
-                          className="justify-content-center justify-content-lg-start"
-                          direction="horizontal"
+                          className='justify-content-center justify-content-lg-start'
+                          direction='horizontal'
                         >
                           <Button
                             className={styles.submit_button}
-                            form="contact-form"
-                            size="lg"
-                            type="submit"
-                            variant="dark"
+                            form='contact-form'
+                            size='lg'
+                            type='submit'
+                            variant='dark'
                           >
                             Send
-                            <span className="ms-3">
-                              <i className="bi bi-arrow-right-short h2" />
+                            <span className='ms-3'>
+                              <i className='bi bi-arrow-right-short h2' />
                             </span>
                           </Button>
                         </Stack>
@@ -135,6 +176,7 @@ const ContactSection = () => {
                 )}
               </Formik>
             </FadeInUp>
+            <Stack className='mt-3'>{result}</Stack>
           </Col>
         </Row>
       </Container>
