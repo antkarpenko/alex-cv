@@ -29,7 +29,7 @@ const ResumeSection = () => {
               <div className={`${styles.border} ps-3`}>
                 <div className="fs-4">Master of Computer Science</div>
                 <p className="mb-2">
-                  Kharkiv National Automobile and Highway University / 2011-2016
+                  Kharkiv National Automobile and Highway University / 2010-2015
                 </p>
               </div>
             </FadeInUp>

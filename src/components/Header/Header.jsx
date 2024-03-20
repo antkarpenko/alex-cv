@@ -8,8 +8,6 @@ const MAP_LINKS = [
   "services",
   "resume",
   "portfolio",
-  "faq",
-  "client",
   "contact",
 ];
 

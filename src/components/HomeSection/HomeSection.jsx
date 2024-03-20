@@ -1,7 +1,7 @@
 import { Button, Col, Container, Image, Row, Stack } from "react-bootstrap";
 import styles from "./HomeSection.module.css";
 import { TypeAnimation } from "react-type-animation";
-import avatar from "../../assets/avatar.jpg";
+import avatar from "../../assets/avatar.png";
 import { animated, useSpring } from "@react-spring/web";
 
 const HomeSection = () => {
@@ -19,7 +19,7 @@ const HomeSection = () => {
             lg={8}
           >
             <h1 className="fw-light mb-0 text-uppercase">
-              Hi there, I am Alex Doroshenko
+              Hi there, I am  Anton Karpenko
             </h1>
             <h4 className="text-uppercase mb-0 ms-1 text-typing">
               <TypeAnimation

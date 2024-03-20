@@ -5,8 +5,8 @@ import * as yup from 'yup';
 import FadeInUp from '../FadeInUp';
 import { useState } from 'react';
 
-const EMAIL = 'drshnk.alex@gmail.com';
-const LINKEDIN = 'https://www.linkedin.com/in/doroshenko-senior/';
+const EMAIL = 'hi@antonkarpenko.dev';
+const LINKEDIN = 'https://www.linkedin.com/in/senior-fullstack-dev/';
 
 const ContactSection = () => {
   const { Formik } = formik;
