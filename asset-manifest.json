@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/landing-cv-karpenko/static/css/main.46110e7a.css",
-    "main.js": "/landing-cv-karpenko/static/js/main.226ff2d0.js",
+    "main.js": "/landing-cv-karpenko/static/js/main.fe732f45.js",
     "static/js/787.a71561b8.chunk.js": "/landing-cv-karpenko/static/js/787.a71561b8.chunk.js",
+    "static/media/cv.pdf": "/landing-cv-karpenko/static/media/cv.c2b6d5511a9870d426a5.pdf",
     "static/media/Vroomchat.png": "/landing-cv-karpenko/static/media/Vroomchat.bfd9abc1d445f6368c7b.png",
     "static/media/Photoland2.png": "/landing-cv-karpenko/static/media/Photoland2.567cc816041457fa2763.png",
     "static/media/Vroomchat2.png": "/landing-cv-karpenko/static/media/Vroomchat2.707952672e4fedaca792.png",
-    "static/media/cv.pdf": "/landing-cv-karpenko/static/media/cv.76395af12b459940e7aa.pdf",
     "static/media/Photoland3.png": "/landing-cv-karpenko/static/media/Photoland3.1c03d98828ecede1e95d.png",
     "static/media/Fawo.png": "/landing-cv-karpenko/static/media/Fawo.e05047f663034e5db51f.png",
     "static/media/Photoland.png": "/landing-cv-karpenko/static/media/Photoland.dded2271de8900d1bda6.png",
+    "static/media/avatar.png": "/landing-cv-karpenko/static/media/avatar.e90628485ce439d4da3f.png",
     "static/media/banner1.jpg": "/landing-cv-karpenko/static/media/banner1.a33539a7226c2a9b9f02.jpg",
     "static/media/bootstrap-icons.woff?": "/landing-cv-karpenko/static/media/bootstrap-icons.449ad8adf6ae0424b7ed.woff",
     "static/media/Poppins-Thin.ttf": "/landing-cv-karpenko/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
@@ -25,7 +26,6 @@
     "static/media/Vroomchat3.png": "/landing-cv-karpenko/static/media/Vroomchat3.c3e44dcf38d95ee5fc20.png",
     "static/media/Fawo2.png": "/landing-cv-karpenko/static/media/Fawo2.01f5026c144795b626ba.png",
     "static/media/Fawo3.png": "/landing-cv-karpenko/static/media/Fawo3.59fb39fe777a8137bcb7.png",
-    "static/media/avatar.jpg": "/landing-cv-karpenko/static/media/avatar.8e5bd9432a29a99cba0c.jpg",
     "static/media/back.svg": "/landing-cv-karpenko/static/media/back.eab9b31facd5efde8d3bde5831a18ab8.svg",
     "static/media/frontend.svg": "/landing-cv-karpenko/static/media/frontend.bafff2194b6e9e61037bcca93f063225.svg",
     "static/media/database.svg": "/landing-cv-karpenko/static/media/database.c2b411cad048eb8a8fcd2290796a672a.svg",
@@ -34,11 +34,11 @@
     "static/media/cloud.svg": "/landing-cv-karpenko/static/media/cloud.0ddaaadbfdb598d0da43f36ba5b1df4f.svg",
     "static/media/mobile.svg": "/landing-cv-karpenko/static/media/mobile.ce537d0d7b511f9ea5651fa504158a01.svg",
     "main.46110e7a.css.map": "/landing-cv-karpenko/static/css/main.46110e7a.css.map",
-    "main.226ff2d0.js.map": "/landing-cv-karpenko/static/js/main.226ff2d0.js.map",
+    "main.fe732f45.js.map": "/landing-cv-karpenko/static/js/main.fe732f45.js.map",
     "787.a71561b8.chunk.js.map": "/landing-cv-karpenko/static/js/787.a71561b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46110e7a.css",
-    "static/js/main.226ff2d0.js"
+    "static/js/main.fe732f45.js"
   ]
 }
