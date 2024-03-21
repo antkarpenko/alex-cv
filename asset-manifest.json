@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/landing-cv-karpenko/static/css/main.46110e7a.css",
-    "main.js": "/landing-cv-karpenko/static/js/main.f5d821f2.js",
+    "main.css": "/landing-cv-karpenko/static/css/main.129795fc.css",
+    "main.js": "/landing-cv-karpenko/static/js/main.a636bad4.js",
     "static/js/787.a71561b8.chunk.js": "/landing-cv-karpenko/static/js/787.a71561b8.chunk.js",
     "static/media/cv.pdf": "/landing-cv-karpenko/static/media/cv.c2b6d5511a9870d426a5.pdf",
     "static/media/Vroomchat.png": "/landing-cv-karpenko/static/media/Vroomchat.bfd9abc1d445f6368c7b.png",
@@ -33,12 +33,12 @@
     "static/media/chart.svg": "/landing-cv-karpenko/static/media/chart.3064a382cb0d4c4d1309639fc5e0e8fc.svg",
     "static/media/cloud.svg": "/landing-cv-karpenko/static/media/cloud.0ddaaadbfdb598d0da43f36ba5b1df4f.svg",
     "static/media/mobile.svg": "/landing-cv-karpenko/static/media/mobile.ce537d0d7b511f9ea5651fa504158a01.svg",
-    "main.46110e7a.css.map": "/landing-cv-karpenko/static/css/main.46110e7a.css.map",
-    "main.f5d821f2.js.map": "/landing-cv-karpenko/static/js/main.f5d821f2.js.map",
+    "main.129795fc.css.map": "/landing-cv-karpenko/static/css/main.129795fc.css.map",
+    "main.a636bad4.js.map": "/landing-cv-karpenko/static/js/main.a636bad4.js.map",
     "787.a71561b8.chunk.js.map": "/landing-cv-karpenko/static/js/787.a71561b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46110e7a.css",
-    "static/js/main.f5d821f2.js"
+    "static/css/main.129795fc.css",
+    "static/js/main.a636bad4.js"
   ]
 }
