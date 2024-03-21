@@ -98,7 +98,7 @@ const AboutSection = () => {
               <p className="fs-18 text-dark mb-0">Anton Karpenko</p>
             </FadeInUp>
           </Col>
-          <Col className="p-0" lg={4} md={6}>
+          <Col lg={4} md={6}>
             <FadeInUp delay={400}>
               <p className="text-muted fw-normal mb-0">Email:</p>
               <p className="fs-18 mb-0">
