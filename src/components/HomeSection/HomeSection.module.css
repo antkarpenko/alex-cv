@@ -1,7 +1,7 @@
 .wrapper_home_section {
   background-color: #00fe9c;
   flex-direction: row;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   position: relative;
 }
 

@@ -51,14 +51,18 @@
 
 @media screen and (max-width: 991px) {
   .nav_dropdown {
-    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
-    left: 2%;
     padding: 15px;
     position: absolute;
     top: 50px;
     z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   .open {
@@ -81,5 +85,9 @@
 @media screen and (min-width: 992px) {
   .nav_link i {
     visibility: hidden;
+  }
+
+  .w_60 {
+    width: 60% !important;
   }
 }

@@ -41,7 +41,7 @@ const HomeSection = () => {
               />
             </h4>
             <p className="fs-4">Based in Ukraine.</p>
-            <Button className="fs-6 rounded-0 mt-3" href="" variant="dark">
+            <Button className="fs-6 rounded-0 mt-3" href="#portfolio" variant="dark">
               View My Works
             </Button>
             <Button

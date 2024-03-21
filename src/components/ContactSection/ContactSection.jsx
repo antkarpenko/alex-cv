@@ -10,7 +10,7 @@ const ContactSection = () => {
     <Stack className={`${styles.wrapper_contact_section} section`} id='contact'>
       <Container>
         <Row className='justify-content-center'>
-          <Col className='text-center' lg={6}>
+        <Col className='text-center mx-auto' md={8} lg={6}>
             <h2 className='fs-1 fw-600 mb-5'>Let's get in touch</h2>
             <p className='fs-5 mb-5'>
               I enjoy discussing new projects and design challenges. Please

@@ -21,12 +21,13 @@ const Header = () => {
         defaultActiveKey="#home"
         variant="underline"
       >
-        <Container>
+        <Container fluid>
           <Row className={`${styles.nav_content}`}>
-            <Col xs={2}></Col>
-            <Col xs={8} className={styles.nav_link}>
+            <Col xs={8} className={`${styles.nav_link} w-100`}>
               <div
-                className={`${styles.nav_dropdown} ${open ? styles.open : ""}`}
+                className={`${styles.nav_dropdown} ${open ? styles.open : ""} ${
+                  styles.w_60
+                }`}
               >
                 {MAP_LINKS.map((link, index) => (
                   <Nav.Item key={index}>
